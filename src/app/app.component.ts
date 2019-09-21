@@ -13,13 +13,35 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url:'/home',
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title:'List',
+      url:'/list',
+      icon:'list'
+    },
+    {
+      title:'Profile',
+      icon:'person',
+      children:[
+        {
+          title:'Message',
+          url:'/messages',
+          icon:'mail'
+        },
+        {
+          title:'About',
+          url:'/about',
+          icon:'people'
+        },
+        {
+          title:'My Posts',
+          url:'/my-posts',
+          icon:'menu'
+        }
+
+      ]
     }
   ];
 

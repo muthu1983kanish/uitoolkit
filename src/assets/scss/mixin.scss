@@ -1,0 +1,36 @@
+$vcolor:var(--theme-color-violet-shade);
+@mixin border($args...) {
+    border:$args;
+}
+@mixin borderRadius($radius) {
+    border-radius: $radius;
+}
+@mixin borderDirection($direction,$width,$style,$color) {
+    border-#{$direction}:$width $style $color;
+}
+@mixin position($display:flex, $justify-content:flex-start, $align-items) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin size($width,$height) {
+    width: $width;
+    height: $height;
+}
+@mixin boxModel($width, $height,$pval,$mval) {
+    width: $width;
+    height: $height;
+    padding: $pval;
+    margin: $mval;
+}
+@mixin background($bg,$bg-size, $bg-position, $bg-repeat) {
+    background-image: $bg;
+    background-size: $bg-size;
+    background-position: $bg-position;
+    background-repeat: $bg-repeat;
+}
+@mixin font-set($set-color:#000, $set-weight, $set-size) {
+    color: $set-color;
+    font-weight: $set-weight;
+    font-size: $set-size;
+}

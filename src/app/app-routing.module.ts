@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule) },
+  { path: 'my-posts', loadChildren: () => import('./my-posts/my-posts.module').then(m => m.MyPostsPageModule) },
+  { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m=>m.MessagesPageModule) },
+  { path: 'about', loadChildren: () => import('./about/about.module').then(m=>m.AboutPageModule) }
 ];
 
 @NgModule({

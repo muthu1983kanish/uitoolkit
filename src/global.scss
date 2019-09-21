@@ -24,3 +24,42 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+$val10:10px;
+$vcolor:var(--theme-color-violet-rgba);
+$val0:0px;
+
+
+@mixin border($args...) {
+    border:$args;
+}
+@mixin borderRadius($radius) {
+    border-radius: $radius;
+}
+@mixin borderDirection($direction,$width,$color,$style) {
+    border-#{$direction}:$width $style $color;
+}
+@mixin position($display, $justify-content, $align-items, $flex-direction) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+@mixin size($width,$height) {
+    width: $width;
+    height: $height;
+}
+@mixin boxModel($width,$height,$pval,$mval:0) {
+    width: $width;
+    height: $height;
+    padding: $pval;
+    margin: $mval;
+}
+@mixin background($bg,$bg-size, $bg-position, $bg-repeat) {
+    background: $bg $bg-repeat $bg-position;
+}
+@mixin font-set($set-color, $set-weight, $set-size) {
+    color: $set-color;
+    font-weight: $set-weight;
+    font-size: $set-size;
+}

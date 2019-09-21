@@ -1,0 +1,68 @@
+@import '../global.scss';
+
+.profile-card {
+  @include position(flex, flex-start, center, row);
+  @include boxModel(100%,auto,$val10*4 0);
+  >ion-avatar {
+    @include border(4px solid $vcolor);
+    @include size(72px,72px);
+   >img {
+     max-width: 100%;
+     height: auto;
+    }
+  }
+  >div {
+    margin-left: $val10*2;
+    >h2 {
+      @include font-set(#fff,normal,$val10+8);
+      margin: 0;
+    }
+    >h5 {
+      @include font-set(#fcfcfc,normal,$val10+2);
+      margin: 0;
+    }
+  }
+}
+
+.v-profile-card {
+  @extend .profile-card;
+  justify-content: center;
+  flex-direction: column;
+  div{
+    @include position(flex, center, center, column);
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+.sidebar-violet {
+  --background:var(--theme-color-violet) !important;
+  ion-list, ion-item, ion-content {
+    --ion-background-color: transparent !important;
+  }
+  ion-icon {
+    --ion-color-base: var(--theme-color-violet-icon) !important;
+    --ion-text-color: var(--theme-color-violet-icon) !important;
+    --color: var(--ion-item-color,var(--ion-text-color,--theme-color-violet-icon))!important;
+  }
+  ion-label {
+    --color:#fff;
+  } 
+}
+
+.active {
+  --ion-text-color: var(--ion-color-primary);
+
+  ion-icon {
+      --ion-text-color-rgb: var(--ion-color-primary);
+  }
+}
+
+.parent-active {
+  font-weight: 500;
+}
+
+.sub-item {
+  padding-left: 20px;
+  font-size: small;
+}  
+  
